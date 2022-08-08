@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" xmlns:xi="http://www.w3.org/2001/XInclude" packages="com.example.SpringBootApplication.appender">
+    <Appenders>
+        <CustomAppender name="CustomAppender">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss}  [trace_id= %mdc{trace_id} spanID=%X{span_id}]- %msg%n" />
+        </CustomAppender>
+    </Appenders>
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="CustomAppender" />
+        </Root>
+    </Loggers>
+</Configuration>
